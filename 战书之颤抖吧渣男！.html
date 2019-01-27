@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>战书之颤抖吧渣男！</title>
+</head>
+<style>
+  *{
+    margin:0px auto;
+    padding:0px;
+  }
+  #kuangjia
+  { width:250px;
+    height:250px;
+    border:#F00 solid 3px;
+    background-size:contain;
+    background-repeat:no-repeat;
+  }
+  .t1
+  {
+    width:60px;
+    height:60px;
+    background-repeat:no-repeat;
+    background-size:contain;}
+
+</style>
+</head>
+<body>
+<audio src="http://www.170mv.com/kw/other.web.ri01.sycdn.kuwo.cn/resource/n3/52/16/2544294835.mp3"
+        autoplay="autoplay"
+        loop="loop"
+        controls="controls">
+  your browser does not support the audio element
+</audio>
+>
+<div id="kuangjia"><!--大div作为框架--></div>
+</body>
+</html>
+
+<script>
+  var jh=new Array();
+  jh[0]="url(1.jpg)";
+  jh[1]="url(sf.png)";
+  jh[2]="url(bg2.png)";
+  var kj=document.getElementById("kuangjia");<!--获取框架div的标签，在下面进行更改背景-->
+  var x=-1;<!--定义变量x，建立索引-->
+  var l=jh.length;<!--获取集合中元素个数-->
+  function lb()
+  {
+    x++;
+    if (x==l)
+    {
+      x=0;
+    }
+    kj.style.backgroundImage=jh[x];
+    window.setTimeout("lb()",700);<!--2s后再次播放集合中的图片-->
+  }
+  window.setTimeout("lb()",0);<!--开始进行轮播-->
+</script>
