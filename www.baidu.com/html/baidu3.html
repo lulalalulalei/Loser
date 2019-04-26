@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>百度一下，你就知道</title>
+    <link href="../image/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="../js/jquery-1.6.2.js"></script>
+    <script src="../js/baidu3js.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body,html {
+            height: 100%;
+        }
+        html {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .header {
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            font: 13px arial;
+            font-weight: 700;
+            line-height: 50px;
+
+        }
+        .header_right{
+            float:left;
+            margin-left:10px;
+            margin-right:10px;
+            padding-top: 5px;
+        }
+        .img{
+            width:100%;
+            height:129px;
+
+            text-align:center;
+        }
+        .search{
+            width:100%;
+            height:55px;
+
+            text-align:center;
+            line-height:40px;
+        }
+        .footer{
+            width:100%;
+            /*height:460px;*/
+            text-align:center;
+        }
+        a.header1 {
+            color:black;
+        }
+        a.header2 {
+            color:white;
+            text-decoration: none;
+        }
+        a.footer {
+            color:#999;
+        }
+        #s_mid {
+            height: 43px;
+            width: 45%;
+            margin: 0 auto;
+        }
+        .search {
+            width: 100%;
+        }
+        .search .insearch {
+            width: 100%;
+            height: 34px;
+            margin-top: 5px;
+            border: 1px solid #b6b6b6;
+            border-right: none;
+        }
+        .search .insearch:focus {
+            border-color: #4791ff;
+
+        }
+        #cam {
+            border: 1px solid #b6b6b6;
+            border-left: none;
+            border-right: none;
+        }
+        #form {
+            list-style: none;
+        }
+        .changecolor a:hover {
+            color: #00c;
+        }
+        .more{
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 10px auto 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .more span {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 10px auto 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        #s1 {
+            background: url("../image/nuomi_7f5cd35.png") no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+        #s2 {
+            background: url("../image/erweima.png") no-repeat;
+            background-size: cover;
+        }
+        #s3 {
+            background: url("../image/qqjt_9809ca8.png") no-repeat;
+            background-size: cover;
+        }
+        #s4 {
+            background: url("../image/wenku_aaf198d.png") no-repeat;
+            background-size: cover;
+        }
+        #s5 {
+            background: url("../image/zhidao_cbf2aff.png") no-repeat;
+            background-size: cover;
+        }
+        #s6 {
+            background: url("../image/fengyunbang_1986a40.png") no-repeat;
+            background-size: cover;
+        }
+        .more a {
+            display: block;
+            text-align: center;
+            width: 66px;
+            height: 76px;
+            margin: 0 auto;
+            border-bottom: #f0f0f0 1px solid;
+            color: #666;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        #header22 {
+            background-color: #3385FF;
+            height: 23px;
+            margin-top: 15px;
+            line-height: 20px;
+            color: white;
+            width: 60px;
+        }
+        #header22:hover {
+            background-color: white;
+            height: 23px;
+            margin-top: 15px;
+            line-height: 20px;
+            width: 60px;
+        }
+
+    </style>
+
+
+</head>
+<body link="#0000cc">
+<div class="header " >
+
+    <div class="header_right changecolor" style="margin-left:69.63%; ">
+        <a href="" target="_blank" class="header1">新闻</a>
+    </div>
+
+    <div class="header_right changecolor" >
+        <a href="" target="_blank" class="header1">hao123</a>
+    </div>
+
+    <div class="header_right changecolor " >
+        <a href="" target="_blank" class="header1">地图</a>
+    </div>
+    <div class="header_right  changecolor" >
+        <a href="" target="_blank" class="header1">视频</a>
+    </div>
+
+    <div class="header_right changecolor " >
+        <a href="" target="_blank" class="header1">贴吧</a>
+    </div>
+    <div class="header_right changecolor" >
+        <a href="" target="_blank" class="header1">学术</a>
+    </div>
+
+    <div class="header_right changecolor" >
+        <a href="" target="_blank" class="header1" style="font: 12px arial">登录</a>
+    </div>
+    <div class="header_right changecolor" >
+        <a href="" target="_blank" class="header1" style="font: 12px arial">设置</a>
+    </div>
+
+    <div class="header_right "  >
+
+        <div id="header22" >
+            <a href="" target="_blank" class="header2">
+                <div style="text-decoration: none;font: 13px arial;padding-top: 3px;">更多产品</div>
+
+            </a>
+
+        </div>
+        <div class="more">
+            <a href=""><span id="s1"></span></a>
+            <a href=""><span id="s2"></span></a>
+            <a href=""><span id="s3"></span></a>
+            <a href=""><span id="s4"></span></a>
+            <a href=""><span id="s5"></span></a>
+            <a href=""><span id="s6"></span></a>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="img">
+
+    <div >
+        <img src="../image/bd_logo1.png" alt="百度首页" width=270  height=129  style="margin-top:-20px;" />
+
+    </div>
+
+</div>
+
+<div class="search">
+    <div id="s_mid" >
+
+        <div style="float:left;width: 78%">
+            <form id="form" action="https://www.baidu.com" method="get">
+                <input class="insearch" name="search" id="search" type="text" onclik="addli()"  />
+            </form>
+        </div>
+
+
+        <div style="float:left;margin-top:5px; width: 7%">
+            <a href="" ><img id="cam" src="../image/cam1.png" alt="camera" width=100% height=34  /></a>
+        </div>
+
+        <div style="float:left;width: 15%;">
+            <form action="https://www.baidu.com" method="get">
+                <input  type="button" value="百度一下" style="width:100%;height:35.6px;margin-top:5px;color:white;font-size:15px;background-color:#3385ff;border:none" />
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer" style="width: 100%; margin-top:240px;text-align: center; ">
+
+    <div style="clear:both;" >
+    <div style="margin-top:240px;width:100%;margin-bottom: 10px;">
+        <img src="../image/erweima.png" alt="二维码" width="60"  height="60"  />
+        <p style="margin-top:2px; font-weight:900;font: 12px arial;">百度</p>
+    </div>
+
+    <div style="text-align:center;width:100%;font: 12px arial;color:gray;margin: 0 auto;">
+
+        <div style="float:left;margin:10px;margin-bottom:5px;margin-left:40%">
+            <a href="" class="footer" style="margin-left: 0px">把百度设为主页</a>
+        </div>
+
+        <div style="float:left;margin:10px;margin-bottom:5px;">
+            <a href="" class="footer" style="margin-left: 0px">关于百度</a>
+        </div>
+
+        <div style="float:left;margin:10px;margin-bottom:5px;">
+            <a href="" class="footer" style="margin-left: 0px">About Baidu</a>
+        </div>
+
+        <div style="float:left;margin:10px;margin-bottom:5px;">
+            <a href="" class="footer" style="margin-left:0px">百度推广</a>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;width:100%;font: 12px arial;color:#999;margin: 0 auto;">
+
+        <div style="float:left;margin:10px;margin-left:33%;margin-top:0px">
+            ©2019&nbsp;Baidu&nbsp;<a href="" class="footer">使用百度前必读</a>&nbsp;<a href="" class="footer">意见反馈</a>&nbsp;京ICP证030173号
+            <img src="../image/logo1.png" alt="京证号" width="14px" height="17px"  />
+        </div>
+
+        <div style="float:left;margin:10px;margin-top:0px;">
+            <a href="" class="footer">京公网安备11000002000001号</a>
+            <img src="../image/logo2.png" alt="京公网" width="14px" height="17px" />
+        </div>
+
+    </div>
+    </div>
+
+</div>
+</body>
+</html>

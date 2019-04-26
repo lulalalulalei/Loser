@@ -1,0 +1,92 @@
+* {
+    margin:0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    font: 12px arial;
+}
+.top .bri {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: #fff;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+}
+.top .ul {
+    height: 30px;
+    line-height: 30px;
+    margin: 19px 0 5px;
+    padding: 0 96px 0 0;
+}
+
+.top .ul ul{
+    float: right;
+    list-style: none;
+}
+.top .ul ul li  {
+    display: inline;
+    float: left;
+    color: #333;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.mid {
+    height: 190px;
+}
+.mid #mid_mid {
+    width: 641px;
+    margin:0 auto;
+}
+#mid_mid #lg {
+    width: 270px;
+    margin:0 auto;
+}
+.mid #form #in{
+    width: 500px;
+    height: 35px;
+    border: 1px solid #b6b6b6;
+    position: absolute;
+}
+.mid #form #in:hover{
+    width: 500px;
+    height: 35px;
+    border-color:#38f;
+    position: absolute;
+}
+.mid #form {
+    height: 35px;
+}
+.mid #form span {
+    height: 35px;
+}
+.mid #form #span1 {
+    position: relative;
+}
+.mid #form #su {
+    width: 100px;
+    height: 38px;
+    background-color: #38f;
+    color: white;
+    position: absolute;
+    right: 0;
+    border: 1px solid #38f;
+}
+.soutu-btn img {
+    background: #fff url("../image/camera_new_5606e8f.png") no-repeat;
+    position: absolute;
+}
