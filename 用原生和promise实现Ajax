@@ -24,26 +24,26 @@ $.ajax({
 var Ajax = {
     get: function(url,fn){
         // XMLHttpRequest对象用于在后台与服务器交换数据
-        var xhr=new XMLHttpRequest();
-        xhr.open('GET',url,false);
-        xhr.onreadystatechange=function(){
+        var xhr=new XMLHttpRequest();//第一步 创建ajax对象
+        xhr.open('GET',url,false);//第二步 打开要发送的地址
+        xhr.onreadystatechange=function(){//第三步
             // readyState == 4说明请求已完成
             if(xhr.readyState==4){
-                if(xhr.status==200 || xhr.status==304){
-                    console.log(xhr.responseText);
+                if(xhr.status==200 || xhr.status==304){//304——客户端已经执行了GET，但文件未变化
+                    console.log(xhr.responseText);//responseText：获得字符串形式的响应数据。
                     fn.call(xhr.responseText);
                 }
             }
         }
-        xhr.send();
+        xhr.send();//第四步发送
     },
 
     // data应为'a=a1&b=b1'这种字符串格式，在jq里如果data为对象会自动将对象转成这种字符串格式
     post: function(url,data,fn){
-        var xhr=new XMLHttpRequest();
-        xhr.open('POST',url,false);
+        var xhr=new XMLHttpRequest();//第一步创建ajax对象
+        xhr.open('POST',url,false);//2.打开请求的方式
         // 添加http头，发送信息至服务器时内容编码类型
-        xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+        xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');3.//如果是post进行提交的时候必须设置响应头
         xhr.onreadystatechange=function(){
             if (xhr.readyState==4){
                 if (xhr.status==200 || xhr.status==304){
@@ -52,7 +52,7 @@ var Ajax = {
                 }
             }
         }
-        xhr.send(data);
+        xhr.send(data);//4.post发送数据请求的时候参数要放在send里面
     }
 }
 代码注释：
