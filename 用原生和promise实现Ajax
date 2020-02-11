@@ -25,7 +25,7 @@ var Ajax = {
     get: function(url,fn){
         // XMLHttpRequest对象用于在后台与服务器交换数据
         var xhr=new XMLHttpRequest();//第一步 创建ajax对象
-        xhr.open('GET',url,false);//第二步 打开要发送的地址
+        xhr.open('GET',url,false);//第二步 打开要发送的地址，open(method, url, async) 方法需要三个参数:
         xhr.onreadystatechange=function(){//第三步
             // readyState == 4说明请求已完成
             if(xhr.readyState==4){
