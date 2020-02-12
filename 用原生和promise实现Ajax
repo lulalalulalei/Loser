@@ -26,8 +26,8 @@ var Ajax = {
         // XMLHttpRequest对象用于在后台与服务器交换数据
         var xhr=new XMLHttpRequest();//第一步 创建ajax对象
         xhr.open('GET',url,false);//第二步 打开要发送的地址，open(method, url, async) 方法需要三个参数:
-        xhr.onreadystatechange=function(){//第三步
-            // readyState == 4说明请求已完成
+        xhr.onreadystatechange=function(){//第三步，存有处理服务器响应的函数
+            // readyState == 4说明请求已完成，存有服务器响应的状态信息。
             if(xhr.readyState==4){
                 if(xhr.status==200 || xhr.status==304){//304——客户端已经执行了GET，但文件未变化
                     console.log(xhr.responseText);//responseText：获得字符串形式的响应数据。
